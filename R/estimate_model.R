@@ -12,6 +12,7 @@
 #' @return An OpenMx fit object containing the estimated model.
 #'
 #' @import OpenMx
+#' @importFrom OpenMx mxRun imxReportProgress
 #'
 #' @export
 estimate_model = function (model, warn = FALSE, ...) {

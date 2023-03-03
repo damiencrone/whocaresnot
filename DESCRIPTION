@@ -11,6 +11,6 @@ Description: This R package implements a factor mixture model (FMM) based approa
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
+Depends:
     OpenMx
 RoxygenNote: 7.2.1

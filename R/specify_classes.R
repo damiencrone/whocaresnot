@@ -10,7 +10,7 @@
 #'   factor loadings.
 #' @param invalid_latent_variance An OpenMx path object specifying the invalid
 #'   group's latent variable variance.
-#' @param latent_means An OpenMx path object specifying the latent variable
+#' @param latent_mean An OpenMx path object specifying the latent variable
 #'   means.
 #' @param error_var An OpenMx path object specifying the error variances.
 #' @param item_int An OpenMx path object specifying the item intercepts.
