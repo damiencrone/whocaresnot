@@ -21,9 +21,8 @@
 #' @importFrom graphics hist plot abline text
 plot_assignment_probability_distribution = function (probs, cutoff = 0.9) {
   h = hist(probs$invalid,
-           xlab = "Prob. invalid",
-           main = "",
-           breaks = 20)
+           breaks = 20,
+           plot = FALSE)
   plot(x = 0,
        type = "n",
        xlim = c(0, 1),
