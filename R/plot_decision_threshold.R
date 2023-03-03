@@ -22,13 +22,13 @@ plot_decision_threshold = function (probs) {
        xlim = c(0, 1),
        ylim = c(0, 1),
        axes = FALSE,
-       xlab = "Decision threshold (P(invalid))",
-       ylab = "Proportion of sample categorized as valid")
+       xlab = "Proportion of sample categorized as valid",
+       ylab = "Decision threshold (P(invalid))")
   abline(v = (0:10)/10, h = (0:10)/10, lwd = 1/4, col = "gray")
   abline(v = 0.5, h = 0.5, lwd = 3/4, col = "gray")
   axis(side = 1)
   axis(side = 2)
   box()
-  lines(x = thresh,
-        y = prop_valid)
+  lines(x = prop_valid,
+        y = thresh)
 }
