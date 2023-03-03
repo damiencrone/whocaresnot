@@ -26,7 +26,7 @@ plot_assignment_probability_distribution = function (probs, cutoff = 0.9) {
   plot(x = 0,
        type = "n",
        xlim = c(0, 1),
-       ylim = range(h$counts),
+       ylim = c(0, max(h$counts)),
        xlab = "Pr(invalid)",
        ylab = "N Responses",
        main = "")
@@ -36,7 +36,7 @@ plot_assignment_probability_distribution = function (probs, cutoff = 0.9) {
     abline(v = cutoff, col = "red", lty = 2)
     nexcl = sum(probs$invalid > cutoff)
     n = nrow(probs)
-    pct = (nexcl/n)*100
+    pct = sprintf(fmt = "%.2f", (nexcl/n)*100)
     cutoff_str = paste0(nexcl, " of ", n, " responses (", pct, "%) above cutoff of ", cutoff)
     graphics::text(x = cutoff,
                    y = max(h$counts),

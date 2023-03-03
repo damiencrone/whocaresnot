@@ -6,8 +6,8 @@
 
 This package implements a factor mixture model (FMM) based approach to
 the detection inconsistent responding to multi-item scales including
-items with different semantic polarity (i.e., reverse-coded items),
-using OpenMx and requiring minimal user input.
+items with different semantic polarity (i.e., reverse-coded items). The
+approach is implemented using OpenMx and requires minimal user input.
 
 Based on the approach described in:
 
@@ -63,6 +63,8 @@ head(dat[, ov])
 
 ``` r
 model = construct_model(data = dat, ov, reversed)
+#> Checking correlations
+#> All pairwise correlations posisive
 ```
 
 ``` r

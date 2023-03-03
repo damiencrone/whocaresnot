@@ -19,7 +19,7 @@
 #' @export
 estimate_model = function (model, try_hard = TRUE, warn = FALSE, ...) {
   if (try_hard) {
-    fit = OpenMx::mxTryHard(model)
+    fit = OpenMx::mxTryHard(model, extraTries = 20)
   } else {
     fit = OpenMx::mxRun(model, suppressWarnings = warn, ...)
   }

@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package implements a factor mixture model (FMM) based approach to the detection inconsistent responding to multi-item scales including items with different semantic polarity (i.e., reverse-coded items), using OpenMx and requiring minimal user input.
+This package implements a factor mixture model (FMM) based approach to the detection inconsistent responding to multi-item scales including items with different semantic polarity (i.e., reverse-coded items). The approach is implemented using OpenMx and requires minimal user input.
 
 Based on the approach described in:
 
