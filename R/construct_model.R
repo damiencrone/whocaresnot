@@ -28,7 +28,7 @@ construct_model = function (data, ov, reversed) {
   invalid_loadings = specify_invalid_loadings(ov, invalid_key)
   valid_latent_variance = specify_latent_variance()
   invalid_latent_variance = specify_latent_variance()
-  latent_means = specify_latent_mean()
+  latent_mean = specify_latent_mean()
   error_var = specify_observed_variances(ov)
   item_int = specify_observed_intercepts(ov)
   class_def = specify_classes(ov,
@@ -36,7 +36,7 @@ construct_model = function (data, ov, reversed) {
                               valid_latent_variance,
                               invalid_loadings,
                               invalid_latent_variance,
-                              latent_means,
+                              latent_mean,
                               error_var,
                               item_int)
   model = specify_model(data, class_def)

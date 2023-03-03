@@ -11,7 +11,7 @@ specify_classes(
   valid_latent_variance,
   invalid_loadings,
   invalid_latent_variance,
-  latent_means,
+  latent_mean,
   error_var,
   item_int,
   fit_fun = NULL,
@@ -33,9 +33,6 @@ factor loadings.}
 \item{invalid_latent_variance}{An OpenMx path object specifying the invalid
 group's latent variable variance.}
 
-\item{latent_means}{An OpenMx path object specifying the latent variable
-means.}
-
 \item{error_var}{An OpenMx path object specifying the error variances.}
 
 \item{item_int}{An OpenMx path object specifying the item intercepts.}
@@ -45,6 +42,9 @@ maximum likelihood estimation.}
 
 \item{lv}{A character string indicating the name of the latent variable.
 Default is "G".}
+
+\item{latent_means}{An OpenMx path object specifying the latent variable
+means.}
 }
 \value{
 A list containing the two class definitions.
