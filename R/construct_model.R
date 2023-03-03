@@ -17,6 +17,7 @@ construct_model = function (data, ov, reversed) {
   invalid_key = rep(1, length(ov))
   invalid_key[ov %in% reversed] = -1
 
+  check_cor(data[, ov])
   if (!all(reversed %in% ov)) {
     stop("All reverse-coded items need to be listed in ov")
   }
