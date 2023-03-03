@@ -46,9 +46,13 @@ library(haven)
 dat = read_sav("~/Downloads/raw_data_and_MPlus_code/DATA_SAMPLE_1.sav")
 ```
 
-```{r specify model}
+```{r specify items}
 ov = c(paste0("E", 1:6, "_P"), paste0("E", 1:6, "_N"))
 reversed = paste0("E", 1:6, "_N")
+head(dat[, ov])
+```
+
+```{r specify model}
 model = construct_model(data = dat, ov, reversed)
 ```
 

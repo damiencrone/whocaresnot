@@ -47,6 +47,21 @@ dat = read_sav("~/Downloads/raw_data_and_MPlus_code/DATA_SAMPLE_1.sav")
 ``` r
 ov = c(paste0("E", 1:6, "_P"), paste0("E", 1:6, "_N"))
 reversed = paste0("E", 1:6, "_N")
+head(dat[, ov])
+#> # A tibble: 6 × 12
+#>             E1_P    E2_P    E3_P    E4_P    E5_P    E6_P    E1_N    E2_N    E3_N
+#>        <dbl+lbl> <dbl+l> <dbl+l> <dbl+l> <dbl+l> <dbl+l> <dbl+l> <dbl+l> <dbl+l>
+#> 1 5 [Very accur… 5 [Ver… 5 [Ver… 4 [Mod… 5 [Ver… 5 [Ver… 5 [Ver… 5 [Ver… 5 [Ver…
+#> 2 1 [Very inacc… 3 [Nei… 3 [Nei… 2 [Mod… 3 [Nei… 4 [Mod… 1 [Ver… 2 [Mod… 1 [Ver…
+#> 3 1 [Very inacc… 2 [Mod… 1 [Ver… 3 [Nei… 3 [Nei… 4 [Mod… 1 [Ver… 2 [Mod… 1 [Ver…
+#> 4 4 [Moderately… 4 [Mod… 5 [Ver… 4 [Mod… 4 [Mod… 4 [Mod… 4 [Mod… 5 [Ver… 5 [Ver…
+#> 5 1 [Very inacc… 4 [Mod… 4 [Mod… 4 [Mod… 5 [Ver… 3 [Nei… 1 [Ver… 3 [Nei… 2 [Mod…
+#> 6 2 [Moderately… 1 [Ver… 4 [Mod… 4 [Mod… 5 [Ver… 1 [Ver… 4 [Mod… 1 [Ver… 4 [Mod…
+#> # … with 3 more variables: E4_N <dbl+lbl>, E5_N <dbl+lbl>, E6_N <dbl+lbl>
+#> # ℹ Use `colnames()` to see all variable names
+```
+
+``` r
 model = construct_model(data = dat, ov, reversed)
 ```
 
