@@ -1,0 +1,70 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# whocaresnot
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This package implements a factor mixture model (FMM) based approach to the detection inconsistent responding to multi-item scales including items with different semantic polarity (i.e., reverse-coded items), using OpenMx and requiring minimal user input.
+
+Based on the approach described in:
+
+Arias, V. B., Garrido, L. E., Jenaro, C., Martínez-Molina, A., & Arias, B. (2020). A little garbage in, lots of garbage out: Assessing the impact of careless responding in personality survey data. Behavior Research Methods, 52(6), 2489–2505. https://doi.org/10.3758/s13428-020-01401-8
+
+## Installation
+
+You can install the development version of whocaresnot from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("damiencrone/whocaresnot")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r libraries}
+library(whocaresnot)
+library(haven)
+```
+
+```{r data}
+# From https://osf.io/n6krb
+dat = read_sav("~/Downloads/raw_data_and_MPlus_code/DATA_SAMPLE_1.sav")
+```
+
+```{r specify model}
+ov = c(paste0("E", 1:6, "_P"), paste0("E", 1:6, "_N"))
+reversed = paste0("E", 1:6, "_N")
+model = construct_model(data = dat, ov, reversed)
+```
+
+```{r estimate model}
+fit = estimate_model(model, try_hard = TRUE)
+probs = get_class_assignment_probabilities(fit)
+```
+
+```{r}
+plot_decision_threshold(probs)
+```
+
+```{r}
+plot_assignment_probability_distribution(probs)
+```
+
+```{r}
+head(get_responses(data = dat[, ov], probs))
+```
