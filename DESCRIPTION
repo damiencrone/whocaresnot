@@ -1,0 +1,16 @@
+Package: whocaresnot
+Type: Package
+Title: Identifies Careless Respnses in Survey Data
+Version: 0.1.0
+Authors@R: c(
+    person("Damien", "Crone", email = "d.crone@northeastern.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3081-4710"))
+    )
+Maintainer: Damien Crone <d.crone@northeastern.edu>
+Description: This R package implements a factor mixture model (FMM) based approach to detect inconsistent responding to multi-item scales including items with different semantic polarity (i.e., reverse-coded items), using OpenMx and requiring minimal user input. Based on the approach described in:
+    Arias, V. B., Garrido, L. E., Jenaro, C., Martínez-Molina, A., & Arias, B. (2020). A little garbage in, lots of garbage out: Assessing the impact of careless responding in personality survey data. Behavior Research Methods, 52(6), 2489–2505. https://doi.org/10.3758/s13428-020-01401-8
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    OpenMx
+RoxygenNote: 7.2.1
