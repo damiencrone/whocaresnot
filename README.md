@@ -29,7 +29,8 @@ devtools::install_github("damiencrone/whocaresnot")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example using the data presented in Arias et al. (2020)
+available at <https://osf.io/n6krb>.
 
 ``` r
 library(whocaresnot)
@@ -68,16 +69,22 @@ fit = estimate_model(model, try_hard = TRUE)
     probs = get_class_assignment_probabilities(fit)
 
 ``` r
+png(filename = "files/cdf.png", height = 480, width = 640)
 plot_decision_threshold(probs)
+dev.off()
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+![cdf](files/cdf.png)
 
 ``` r
+png(filename = "files/prob_hist.png", height = 480, width = 640)
 plot_assignment_probability_distribution(probs)
+dev.off()
+#> quartz_off_screen 
+#>                 2
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+![histogram](files/prob_hist.png)
 
 ``` r
 head(get_responses(data = dat[, ov], probs))
