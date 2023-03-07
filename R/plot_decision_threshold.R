@@ -22,8 +22,8 @@ plot_decision_threshold = function (probs) {
        xlim = c(0, 1),
        ylim = c(0, 1),
        axes = FALSE,
-       xlab = "Proportion of sample categorized as valid",
-       ylab = "Decision threshold (P(invalid))")
+       xlab = "Retention rate (proportion of sample categorized as valid)",
+       ylab = "Decision threshold (retain if < Pr(invalid))")
   abline(v = (0:10)/10, h = (0:10)/10, lwd = 1/4, col = "gray")
   abline(v = 0.5, h = 0.5, lwd = 3/4, col = "gray")
   axis(side = 1)

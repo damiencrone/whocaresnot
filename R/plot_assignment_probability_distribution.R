@@ -19,7 +19,7 @@
 #' plot_assignment_probability_distribution(probs)
 #' @export
 #' @importFrom graphics hist plot abline text
-plot_assignment_probability_distribution = function (probs, cutoff = 0.9) {
+plot_assignment_probability_distribution = function (probs, cutoff = 0.95) {
   h = hist(probs$invalid,
            breaks = 20,
            plot = FALSE)
