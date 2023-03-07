@@ -4,7 +4,7 @@
 \alias{plot_assignment_probability_distribution}
 \title{Plot assignment probability distribution}
 \usage{
-plot_assignment_probability_distribution(probs, cutoff = 0.9)
+plot_assignment_probability_distribution(probs, cutoff = 0.95)
 }
 \arguments{
 \item{probs}{A data frame containing classification probabilities. The data
