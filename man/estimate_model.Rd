@@ -4,7 +4,7 @@
 \alias{estimate_model}
 \title{Estimate the factor mixture model}
 \usage{
-estimate_model(model, try_hard = TRUE, warn = FALSE, ...)
+estimate_model(model, try_hard = TRUE, extra_tries = 50, warn = FALSE, ...)
 }
 \arguments{
 \item{model}{An OpenMx model object that represents the factor mixture model
@@ -12,6 +12,9 @@ constructed using \code{specify_model}.}
 
 \item{try_hard}{Logical indicating whether to use \code{mxTryHard} instead of
 \code{mxRun} for model estimation (default = TRUE).}
+
+\item{extra_tries}{The number of additional tries for \code{mxTryHard} to try
+to find an acceptable solution (default = 50).}
 
 \item{warn}{Logical indicating whether to suppress warning messages during
 model fitting (default = FALSE).}
